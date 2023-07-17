@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Partaone task</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="mnWrpr">
+      <h3>"Become A Developer 2023" (summer course)</h3>
+
+      <ul></ul>
+
+      <form action="" name="smAlgrthm">
+        <fieldset>
+          <legend>Some algorithm</legend>
+          <ul class="mnUl">
+            <li>
+              Description:
+              <ul style="list-style: disc" class="scndUl">
+                <li>
+                  алгоритм приймає на вхід довільний текст і знаходить в кожному
+                  слові цього тексту найперший символ, який більше НЕ
+                  повторюється в аналізуємому слові;
+                </li>
+                <li>
+                  далі із отриманого набору символів програма повинна вибрати
+                  перший унікальний (тобто той, який більше не зустручається в
+                  наборі) і повернути його.
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div>
+            <textarea name="" id="usrInpt" cols="30" rows="10"></textarea>
+          </div>
+
+          <div class="wrprBtnRs">
+            <button id="strt">Start</button
+            ><input id="res" type="text" placeholder="result" disabled />
+          </div>
+        </fieldset>
+      </form>
+
+      <h3>Some text:</h3>
+      <p>
+        The Tao gave birth to machine language. Machine language gave birth to
+        the assembler. The assembler gave birth to the compiler. Now there are
+        ten thousand languages. Each language has its purpose, however humble.
+        Each language expresses the Yin and Yang of software. Each language has
+        its place within the Tao. But do not program in COBOL if you can avoid
+        it. -- Geoffrey James, "The Tao of Programming"
+      </p>
+
+      <p>
+        C makes it easy for you to shoot yourself in the foot. C++ makes that
+        harder, but when you do, it blows away your whole leg. (с) Bjarne
+        Stroustrup
+      </p>
+
+      <fieldset class="displayNone">
+        <legend>Result</legend>
+        <pre id="descrRes"></pre>
+      </fieldset>
+    </div>
+  </body>
+  <script src="index.js" type="module"></script>
+</html>

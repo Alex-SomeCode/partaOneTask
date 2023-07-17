@@ -1,0 +1,69 @@
+#res,
+#strt {
+  display: block;
+  height: unset;
+}
+
+#descrRes {
+  padding: 20px;
+  overflow: auto;
+  max-height: 500px;
+  min-height: 300px;
+  height: 90%;
+  box-sizing: border-box;
+}
+
+.displayNone {
+  display: none;
+}
+
+.wrprBtnRs {
+  display: flex;
+  height: 30px;
+  margin-top: 10px;
+}
+
+#strt {
+  width: 70%;
+}
+#res {
+  width: 30%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: black;
+}
+
+.mnWrpr {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.mnUl {
+  list-style: none;
+  padding-left: 10px;
+}
+
+.scndUl {
+  margin: 5px;
+}
+
+fieldset {
+  padding: 30px;
+  padding-top: 5px;
+}
+
+#usrInpt {
+  box-sizing: content-box;
+  display: block;
+  width: 99%;
+  margin: 0 auto;
+  background-color: darkgray;
+}
+
+body {
+  color: lightgray;
+  background-color: black;
+  cursor: default;
+}
