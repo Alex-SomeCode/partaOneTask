@@ -39,10 +39,9 @@ function gtRs() {
 
 function crtSmblsAr() {
   //
-  let mRgExp,
-    strCopy = strRes;
+  let strCopy = strRes;
 
-  let crntSmbl, arSmbls, obj;
+  let crntSmbl, arSmbls, obj, mRgExp;
 
   while (strCopy.length > 0) {
     crntSmbl = strCopy[0];
