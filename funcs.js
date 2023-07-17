@@ -1,41 +1,29 @@
-const space = " ";
-const rgExp = /\s{2,}/g;
-
-const inrRgxp = /\W/,
-  prArRes = [],
-  arRes = [];
-
-let tmpArSmbls,
-  strRes = "";
-
-const resInp = document.getElementById("res");
-
-const resDescr = document.getElementById("descrRes");
-
-const wrpDescr = document.querySelector(".displayNone");
-
 export function algFunc(strP) {
   //
-
   if (!strP) return;
 
   if (rgExp.test(strP)) {
+    //
     strP = strP.trim();
+
     strP = clrSpc(strP);
+    //
   }
 
   strP.split(space).forEach((element) => {
-    // console.log(element);
-    fndSmblInWrd(element);
+    //
+    wrdSmblFnd(element);
   });
 
-  crtArSmbls();
+  crtSmblsAr();
+  gtRs();
 }
 
 // --------------------
 function gtRs() {
+  //
   const rs = arRes.find((el) => el.cntr == 1);
-  debugger;
+
   resInp.value = rs.smbl;
 
   resDescr.innerText = JSON.stringify(arRes, null, 30);
@@ -49,7 +37,7 @@ function gtRs() {
   return rs;
 }
 
-function crtArSmbls() {
+function crtSmblsAr() {
   //
   let mRgExp,
     strCopy = strRes;
@@ -60,30 +48,27 @@ function crtArSmbls() {
     crntSmbl = strCopy[0];
 
     if (!inrRgxp.test(crntSmbl)) {
+      //
       mRgExp = new RegExp(`${crntSmbl}`, "g");
     } else {
+      //
       mRgExp = new RegExp("\\" + `${crntSmbl}`, "g");
     }
 
     arSmbls = strCopy.match(mRgExp);
 
     obj = { smbl: crntSmbl, cntr: arSmbls.length };
-    // console.log(arRes);
+
     arRes.push(obj);
 
     strCopy = strCopy.replaceAll(crntSmbl, "");
-    // console.log(strCopy.length, strCopy);
+    //
   }
 
   console.log(arRes);
-  gtRs();
 }
 
-function clrSpc(strP) {
-  return strP.replaceAll(rgExp, space);
-}
-
-function fndSmblInWrd(elementP) {
+function wrdSmblFnd(elementP) {
   //
   tmpArSmbls = elementP.split("");
 
@@ -100,11 +85,35 @@ function fndSmblInWrd(elementP) {
     // console.log(indx, tmpArSmbls[i], tmpArSmbls);
 
     if (indx < 0) {
+      //
       strRes += smbl;
+
       //   console.log(strRes, "|--:--|", smbl, elementP);
+
       return;
     }
-
     //
   }
 }
+
+function clrSpc(strP) {
+  //
+  return strP.replaceAll(rgExp, space);
+  //
+}
+
+const space = " ";
+
+const rgExp = /\s{2,}/g;
+
+const inrRgxp = /\W/,
+  arRes = [];
+
+let tmpArSmbls,
+  strRes = "";
+
+const resInp = document.getElementById("res");
+
+const resDescr = document.getElementById("descrRes");
+
+const wrpDescr = document.querySelector(".displayNone");
