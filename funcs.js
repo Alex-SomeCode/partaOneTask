@@ -7,7 +7,6 @@ export function algFunc(strP) {
     strP = strP.trim();
 
     strP = clrSpc(strP);
-    //
   }
 
   strP.split(space).forEach((element) => {
@@ -18,7 +17,6 @@ export function algFunc(strP) {
   crtSmblsAr();
 
   gtRs();
-  //
 }
 
 // --------------------
@@ -37,7 +35,6 @@ function gtRs() {
   strRes = "";
 
   tmpArSmbls = null;
-  //
 }
 
 function crtSmblsAr() {
@@ -65,7 +62,6 @@ function crtSmblsAr() {
     arRes.push(obj);
 
     strCopy = strCopy.replaceAll(crntSmbl, "");
-    //
   }
 
   console.log(arRes);
@@ -82,11 +78,8 @@ function wrdSmblFnd(elementP) {
       strRes += s;
 
       return;
-      //
     }
-    //
   }
-  //
 }
 
 function clrSpc(strP) {
