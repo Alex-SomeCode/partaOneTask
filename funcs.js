@@ -16,7 +16,9 @@ export function algFunc(strP) {
   });
 
   crtSmblsAr();
+
   gtRs();
+  //
 }
 
 // --------------------
@@ -34,7 +36,8 @@ function gtRs() {
 
   strRes = "";
 
-  return rs;
+  tmpArSmbls = null;
+  //
 }
 
 function crtSmblsAr() {
@@ -44,6 +47,7 @@ function crtSmblsAr() {
   let crntSmbl, arSmbls, obj, mRgExp;
 
   while (strCopy.length > 0) {
+    //
     crntSmbl = strCopy[0];
 
     if (!inrRgxp.test(crntSmbl)) {
@@ -71,28 +75,18 @@ function wrdSmblFnd(elementP) {
   //
   tmpArSmbls = elementP.split("");
 
-  let indx, smbl;
-
-  for (let i = 0; i < tmpArSmbls.length; i++) {
+  for (const s of tmpArSmbls) {
     //
-    smbl = tmpArSmbls[i];
-
-    tmpArSmbls[i] = "";
-
-    indx = tmpArSmbls.indexOf(smbl);
-
-    // console.log(indx, tmpArSmbls[i], tmpArSmbls);
-
-    if (indx < 0) {
+    if (tmpArSmbls.indexOf(s) === tmpArSmbls.lastIndexOf(s)) {
       //
-      strRes += smbl;
-
-      //   console.log(strRes, "|--:--|", smbl, elementP);
+      strRes += s;
 
       return;
+      //
     }
     //
   }
+  //
 }
 
 function clrSpc(strP) {
